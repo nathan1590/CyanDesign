@@ -108,34 +108,34 @@ gsap.utils.toArray(".pinthis").forEach((panel, i) => {
   }
 });
 
-ScrollTrigger.create({
-  trigger: '.stats',
-  onEnter: () => {
-    incEltNbr("nbr1");
-    incEltNbr("nbr2");
-    incEltNbr("nbr3");
-  } ,
-  onEnterBack: () => {
-    incEltNbr("nbr1");
-    incEltNbr("nbr2");
-    incEltNbr("nbr3");
-  }  
-});
-gsap.to('.stats', {
-  scrollTrigger: {
-    trigger: '.stats',
-    onEnter: () => {
-      incEltNbr("nbr1");
-      incEltNbr("nbr2");
-      incEltNbr("nbr3");
-    } ,
-    onEnterBack: () => {
-      incEltNbr("nbr1");
-      incEltNbr("nbr2");
-      incEltNbr("nbr3");
-    },
-  },
-})
+// ScrollTrigger.create({
+//   trigger: '.stats',
+//   onEnter: () => {
+//     incEltNbr("nbr1");
+//     incEltNbr("nbr2");
+//     incEltNbr("nbr3");
+//   } ,
+//   onEnterBack: () => {
+//     incEltNbr("nbr1");
+//     incEltNbr("nbr2");
+//     incEltNbr("nbr3");
+//   }  
+// });
+// gsap.to('.stats', {
+//   scrollTrigger: {
+//     trigger: '.stats',
+//     onEnter: () => {
+//       incEltNbr("nbr1");
+//       incEltNbr("nbr2");
+//       incEltNbr("nbr3");
+//     } ,
+//     onEnterBack: () => {
+//       incEltNbr("nbr1");
+//       incEltNbr("nbr2");
+//       incEltNbr("nbr3");
+//     },
+//   },
+// })
 // ScrollTrigger.create({
 //   snap: 1/6 // snap whole page to the closest section!
 // });
