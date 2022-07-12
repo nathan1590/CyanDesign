@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyan Studios Web Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        main: '#040D21'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.47"></script>
+    <script src="script.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ND02BY74XC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ND02BY74XC');
+    </script>
+</head>
+
+<body class="bg-main font-['Poppins'] font-medium overflow-x-hidden">
+    <img class="absolute left left-0 top-20" src="assets/slashleft.svg">
+    <img class="absolute right right-0 top-0" src="assets/slashright.svg">
+    <!-- NAV BAR -->
+    <section class=" relative w-full min-h-screen flex flex-col justify-start ">
+
+        <input type="checkbox" id="check">
+        <header class="navbar relative w-full px-4 py-10 top-0 flex justify-between align-center">
+
+
+            <div class="flex flex-row justify-start rounded-full px-4 ml-3 py-2 bg-[#63C0BD]/[.15]">
+                <img src="assets/status_symbol.svg" alt="status symbol">
+                <h2 class="status logo text-white text-sm hidden lg:block">Available for Work</h2>
+            </div>
+
+
+            <div class="navigation text-[#CCCDD0] tracking-wider">
+                <a id="link" href="#home">Home</a>
+                <a id="link" href="#about">About</a>
+                <a id="link" href="#work">Work</a>
+                <a href="mailto:nathan.seb.anil@gmail.com?&subject=I would like a new website&body=# What is the website for (Personal, Company, Organization, etc.)?"class="btn gradientBorder px-7 py-2 mr-3 transform transition duration-500 hover:text-white"
+                    onmouseover="changetobg(event)" onmouseleave="changefrombg(event)" href=" #">Get a Site</a>
+            </div>
+            <label class="mr-5 " for="check">
+                <svg class="menu-btn w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path fill="#fff"
+                        d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+                </svg>
+                <svg class="close-btn w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path fill="#fff"
+                        d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
+                </svg>
+            </label>
+
+        </header>
+        <!-- <div class="content absolute top-1/3 left-5 md:left-12 w-screen h-screen/2 md:w-1/2 md:px-1">
+            <div class="titleleft">
+                <h2 class="text-[#E9E9E9] text-3xl md:text-3xl mb-2">Hello I'm</h2>
+                <h1 class="text-white  text-6xl md:text-8xl font-bold mb-1">Nathan Anil</h1>
+                <p class="text-[#DCDCDC]/[.6] text-2xl md:text-2xl font-[400] mb-10">Im a freelnace web design and
+                    developer mdoern futureistic and stuff</p>
+            </div>
+            <div class="w-10 h-10 flex mt-10 border-2 gradientBorder rounded-xl text-white"> 
+                <a href="#features"><svg class="relative "width="20" height="20" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L7.36598 6.69524C8.87409 8.01483 11.1259 8.01482 12.634 6.69523L18 2" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg></a>
+            </div>
+        </div> -->
+
+        <div id="home" class="relative container px-4 pt-15 mt-10 md:pt-20 mx-auto">
+
+            <div class="flex flex-wrap items-center -mx-4 mb-20 2xl:mb-14">
+                <div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
+
+                    <div class="hello1 md:text-left text-center text-[#E9E9E9] text-3xl"><span class="justhello">Welcome
+                        </span>to</div>
+                    <h2
+                        class="name max-w-2xl mt-3 mb-3 text-7xl 2xl:text-10xl text-white font-bold font-heading md:text-left text-center">
+                        Cyan Design
+
+                    </h2>
+                    <p class="description mb-12 lg:mb-16 2xl:mb-24 text-xl text-gray-300 md:text-left text-center">We
+                        build fast and modern websites with your brand image and purpose in mind. </p>
+                    <a class="downarrow inline-block mt-20 px-5 py-5 text-lg border-2 gradientBorder rounded-xl text-white grow"
+                        href="#about">
+                        <svg class="relative  transform transition" width="20" height="20" viewBox="0 0 20 10"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L7.36598 6.69524C8.87409 8.01483 11.1259 8.01482 12.634 6.69523L18 2"
+                                stroke="white" stroke-width="3" stroke-linecap="round" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="about" class="container w-full  md:w-3/4 lg:w-[60%] mx-auto px-4 mb-20">
+
+        <div class="flex flex-wrap items-center">
+            <h1 class="mx-auto font-[600] text-4xl mb-20 text-white">What I offer</h1>
+            <div class="w-full  flex flex-wrap -mx-4">
+                <div class="mb-8 lg:mb-0 w-full md:w-1/2 px-4">
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528] aos-init aos-animate"
+                        data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+
+                        <img class="mb-10 mx-auto" width="500px" height="50px" src="assets/dark.svg">
+
+                        <h4 class="mb-2 text-2xl font-[600] font-heading text-white">Optimized for SEO</h4>
+                        <p class="text-[#E6E6E6] text-md leading-loose">Have your website show up on the front page
+                            of Google. </p>
+                    </div>
+
+
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528]" data-aos="fade-up"
+                        data-aos-delay="200" data-aos-duration="1000">
+
+                        <img class="mb-10 mx-auto" width="500px" height="300px" src="assets/tree.svg">
+
+                        <h4 class="mb-2 text-2xl font-[600] font-heading text-white">Eye catching designs </h4>
+                        <p class="text-[#E6E6E6] text-md leading-loose">Modern styles and layouts
+                            that grab your visitor’s attention and make them stay. </p>
+                    </div>
+
+
+                </div>
+                <div class="w-full md:w-1/2 lg:mt-20 px-4">
+
+
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528]" data-aos="fade-up"
+                        data-aos-delay="400" data-aos-duration="1000">
+
+                        <img class="mb-10 mx-auto" width="500px" height="50px" src="assets/growth.svg">
+
+                        <h4 class="mb-2 text-2xl font-[600] font-heading text-white">Intuitive UX </h4>
+                        <p class="text-[#E6E6E6] text-md leading-loose">Foster trust and reliability through an enhanced
+                            user experience. </p>
+                    </div>
+
+
+
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528] " data-aos="fade-up"
+                        data-aos-delay="400" data-aos-duration="1000">
+
+                        <img class="mb-10 mx-auto" width="500px" height="50px" src="assets/boxes.svg">
+
+                        <h4 class="mb-2 text-2xl font-[600] font-heading text-white">Effective organization</h4>
+                        <p class="text-[#E6E6E6] text-md leading-loose">Deliver your information in a way that makes
+                            sense and looks good. </p>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="work w-full mb-25 ml-5 flex mb-5 justify-start">
+        <div class="flex justify-center flex-col">
+            <img src="./assets/Work.svg">
+            <img class="line mx-auto mt-5" width="2" class="mx-auto mt-4" src="./assets/line.svg">
+        </div>
+
+    </div>
+
+    <div id="work" class=" rounded-3xl flex flex-col justify-center align-center w-[90%] mx-auto lmm pinthis bg-[#fff] h-[75%] py-5">
+
+        <div class=" flex md:flex-row flex-col flex-wrap justify-center md:justify-around space-10 align-center">
+            <div class="worktitle w-full px-5 md:w-[30%] my-auto">
+                <p class="text-['Roboto'] mb-5 text-5xl font-bold text-black">Louisville <br>Mission <span
+                        class="text-[#4B8DDA]">Math</span> </p>
+            </div>
+
+            <img class="rounded-xl mx-auto lg:mx-0  w-[90%] md:w-[55%]" src="./assets/lmmmockup.jpeg">
+        </div>
+
+    </div>
+
+
+    <div id="work"
+        class="saroga rounded-3xl flex flex-col justify-center align-center  h-[75%] w-[90%] mx-auto pinthis bg-[rgb(21,27,50)] py-5">
+
+        <div class=" flex md:flex-row flex-col flex-wrap justify-center md:justify-around space-10 align-center">
+            <div class="worktitle w-full px-5 md:w-[30%] my-auto">
+                <p class="text-['Roboto'] mb-5 text-5xl font-bold text-white">Saroga.<span
+                        class="text-[#13BC58]">tech</span>
+                </p>
+            </div>
+
+            <img class="rounded-xl mx-auto lg:mx-0  w-[90%] md:w-[55%]" src="./assets/saroga.jpeg">
+        </div>
+
+    </div>
+
+    <div id="work"
+        class="rocket rounded-3xl flex flex-col justify-center align-center  h-[75%] w-[90%] mx-auto pinthis bg-[#121212] py-5">
+
+        <div class=" flex md:flex-row flex-col flex-wrap justify-center md:justify-around space-10 align-center">
+            <div class="worktitle w-full px-5 md:w-[30%] my-auto">
+                <p class="text-['Roboto'] mb-5 text-5xl font-bold text-white">Louisville <span
+                        class="text-[#ef0f0f]">Rocketry</span>
+                </p>
+                <a href="https://www.louisvillerocketry.com/" class="text-lg text-white underline decoration-[#ef0f0f]">Visit</a>
+            </div>
+
+            <img class="rounded-xl mx-auto lg:mx-0  w-[90%] md:w-[55%]" src="./assets/rocket.jpeg">
+        </div>
+
+    </div>
+
+
+    <div class="container stats w-screen mx-auto px-4 mt-20">
+        <div class="flex flex-wrap items-center justify-center text-center">
+            <h1 class="mx-auto font-[600] text-4xl mt-10 mb-20 text-white">Why should you care?</h1>
+            <div class="flex flex-col md:flex-row">
+                <div class="flex flex-col items-center text-center mb-10" data-aos-duration="1000"
+                    data-aos="fade-up-right">
+                    <p id="nbr1" class="stroke-gradient"> 90</p>
+                    <p class="text-[#D9D9D9] text-lg w-1/2">of users will leave a site due to bad UI/UX design <a
+                            target="_blank" class="text-blue-500 text-md"
+                            href="https://truelist.co/blog/ux-statistics/">¹</a></p>
+                </div>
+                <div class="flex flex-col items-center text-center mb-10" data-aos-duration="1000" data-aos="fade-up">
+                    <p id="nbr2" class="stroke-gradient"> 95</p>
+                    <p class="text-[#D9D9D9] text-lg w-1/2">of people do not trust outdated websites <a target="_blank"
+                            class="text-blue-500 text-md" href="https://truelist.co/blog/ux-statistics/">²</a></p>
+                </div>
+                <div class="flex flex-col items-center text-center mb-10" data-aos-duration="1000"
+                    data-aos="fade-up-left">
+                    <p id="nbr3" class="stroke-gradient"> 200</p>
+                    <p class="text-[#D9D9D9] text-lg w-1/2">conversion rate increases from a good user interface <a
+                            target="_blank" class="text-blue-500 text-md"
+                            href="https://truelist.co/blog/ux-statistics/">³</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class=" pt-20 flex flex-col justify-between align-center text-center">
+        <a href="mailto:nathan.seb.anil@gmail.com?&subject=I would like a new website&body=# What is the website for (Personal, Company, Organization, etc.)?"
+            onmouseover="changetobg2(event)" onmouseleave="changefrombg2(event)"
+            class="mb-5 shadow-[0_5px_60px_-15px_#2456EA] mx-auto px-5 py-5 w-[25%] text-white text-2xl text-center callAction hover:gradientBg ">
+            Get a site
+        </a>
+        <!-- <a href="mailto:nathan.seb.anil@gmail.com?&subject=I would like to upgrade my site&body=# What is the website for (Personal, Company, Organization, etc.)? "
+            onmouseover="changetobg2(event)" onmouseleave="changefrombg2(event)"
+            class="shadow-[0_5px_60px_-15px_#158FA5] mx-auto px-5 py-5 w-[25%] text-white text-2xl text-center callAction hover:gradientBg ">
+            Upgrade my site
+        </a> -->
+        <div class="text-md text-[#CCCDD0] dontpay mt-3 ">
+            Don’t like it? Don’t pay.
+        </div>
+
+    </section>
+    <div class="text-lg mx-auto w-screen flex flex-col justify-center py-10 mt-5 text-white dontpay">
+        <p class="mx-auto">Questions?</p>
+        <a href="mailto:nathan.seb.anil@gmail.com?&subject=Question/Comment/Concern&body=" class="mx-auto underline">
+            Email me</a>
+    </div>
+
+    <canvas class="rocket hidden lg:block absolute md:left-[55%] md:top-[20%] top-40 left-0 z-[-1]" id="canvas"
+        width="650" height="650"></canvas>
+
+    <script>
+        new rive.Rive({
+            src: "assets/rocket.riv",
+            // Or the path to a local Rive asset
+            // src: './example.riv',
+            canvas: document.getElementById("canvas"),
+            autoplay: true,
+            fit: rive.Fit.cover
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
