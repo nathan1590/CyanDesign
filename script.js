@@ -53,60 +53,63 @@ function incNbrRec(i, endNbr, elt) {
   }
 }
 
-
-gsap.registerPlugin(ScrollTrigger)
-const timeline = gsap.timeline({ defaults: { duration: 1 } })
-// timeline.from('.titleHero', { x: '500%', ease: 'expo.inOut' })
-timeline
-.fromTo('.hello1', {x:'50%', y:'50%', opacity:0, duration:.5, delay:4},{x:'50%', y:'0%', opacity:1, duration:.5,ease:"back.out(2)"})
-.fromTo('.name', {x:'50%', y:'50%', opacity:0, duration:.5},{x:'50%', y:'0%', opacity:1, duration:.6,ease:"back.out(3)"})
-.to('.hello1', { x: '0%', ease: 'expo.inOut' , duration:1.5})
-.to('.name', { x: '0%', ease: 'expo.inOut' , duration:1.5}, '<')
-.from('.navbar', { y: '-100%', ease: 'expo.inOut', duration:1}, '<1')
-.fromTo('.description', {opacity:0}, {opacity:1})
-//.fromTo('.downarrow', {scaleX:.5,  scaleY:.5}, {scaleX:1, scaleY:1, duration:.1}, '<')
-.fromTo('.downarrow', {opacity:0}, {opacity:1,duration:.3}, '<', )
-.fromTo('.rocket', {opacity:0}, {opacity:1, ease:'power.in', duration:.9}, '<')
-.from('.left', {x:'-100%', y:'-50%',duration:.6}, '<')
-.from('.right', {x:'100%', y:'50%',duration:.6}, '<');
-
-gsap.utils.toArray(".pinthis").forEach((panel, i) => {
-  if(i==1) {
-    ScrollTrigger.create({
-      trigger: panel,
-      start: "top top", 
-      end: 'bottom',
-      pin: true, 
-      pinSpacing: false,
-
-
-    });
-  }else if(i==0){
-    ScrollTrigger.create({
-      trigger: panel,
-      start: "top", 
-      end: "bottom",
-      pin: true, 
-      pinSpacing: false,
-
-
-
-      
-    });
-  }else {
-    ScrollTrigger.create({
-      trigger: panel,
-      start: "top", 
-      end: "bottom",
-      pin: true, 
-      end: "-=10%",
-      start: "-=10%",
-      pinSpacing: false,
-
-      
-    });
-  }
-});
+var w = window.innerWidth;
+if(w >= 1000) {
+  gsap.registerPlugin(ScrollTrigger)
+  const timeline = gsap.timeline({ defaults: { duration: 1 } })
+  // timeline.from('.titleHero', { x: '500%', ease: 'expo.inOut' })
+  timeline
+  .fromTo('.hello1', {x:'50%', y:'50%', opacity:0, duration:.5, delay:4},{x:'50%', y:'0%', opacity:1, duration:.5,ease:"back.out(2)"})
+  .fromTo('.name', {x:'50%', y:'50%', opacity:0, duration:.5},{x:'50%', y:'0%', opacity:1, duration:.6,ease:"back.out(3)"})
+  .to('.hello1', { x: '0%', ease: 'expo.inOut' , duration:1.5})
+  .to('.name', { x: '0%', ease: 'expo.inOut' , duration:1.5}, '<')
+  .from('.navbar', { y: '-100%', ease: 'expo.inOut', duration:1}, '<1')
+  .fromTo('.description', {opacity:0}, {opacity:1})
+  //.fromTo('.downarrow', {scaleX:.5,  scaleY:.5}, {scaleX:1, scaleY:1, duration:.1}, '<')
+  .fromTo('.downarrow', {opacity:0}, {opacity:1,duration:.3}, '<', )
+  .fromTo('.rocket', {opacity:0}, {opacity:1, ease:'power.in', duration:.9}, '<')
+  .from('.left', {x:'-100%', y:'-50%',duration:.6}, '<')
+  .from('.right', {x:'100%', y:'50%',duration:.6}, '<');
+  
+  gsap.utils.toArray(".pinthis").forEach((panel, i) => {
+    if(i==1) {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top", 
+        end: 'bottom',
+        pin: true, 
+        pinSpacing: false,
+  
+  
+      });
+    }else if(i==0){
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top", 
+        end: "bottom",
+        pin: true, 
+        pinSpacing: false,
+  
+  
+  
+        
+      });
+    }else {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top", 
+        end: "bottom",
+        pin: true, 
+        end: "-=10%",
+        start: "-=10%",
+        pinSpacing: false,
+  
+        
+      });
+    }
+  });
+  
+}
 
 // ScrollTrigger.create({
 //   trigger: '.stats',
