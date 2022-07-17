@@ -8,7 +8,7 @@ body {
 }
 body {
   overscroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .grow {
   transition: all .2s ease-in-out;
@@ -120,7 +120,7 @@ label {
   }
 
   #check:checked~header label .close-btn {
-    z-index: 2;
+    z-index: 101;
     display: block;
     position: fixed;
   }
