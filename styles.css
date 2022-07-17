@@ -8,7 +8,7 @@ body {
 }
 body {
   overscroll-behavior: smooth;
-
+  overflow-x: hidden;
 }
 .grow {
   transition: all .2s ease-in-out;
