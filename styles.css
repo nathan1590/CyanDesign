@@ -73,6 +73,9 @@ label {
   header .navigation {
     display: none;
   }
+  .left, .right {
+    display: none;
+  }
   /* 
 
   label {
