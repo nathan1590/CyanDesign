@@ -8,7 +8,8 @@ body {
 }
 body {
   overscroll-behavior: smooth;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .grow {
   transition: all .2s ease-in-out;
@@ -72,6 +73,7 @@ label {
   header .navigation {
     display: none;
   }
+  /* 
 
   label {
     display: block;
@@ -133,7 +135,7 @@ label {
   header .logo {
     position: absolute;
     bottom: -6px;
-  }
+  } */
 }
 
 a {
