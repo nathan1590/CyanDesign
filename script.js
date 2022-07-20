@@ -54,7 +54,7 @@ function incNbrRec(i, endNbr, elt) {
 }
 
 var w = window.innerWidth;
-if(10 >= 1000) {
+if(w >= 1000) {
   gsap.registerPlugin(ScrollTrigger)
   const timeline = gsap.timeline({ defaults: { duration: 1 } })
   // timeline.from('.titleHero', { x: '500%', ease: 'expo.inOut' })
