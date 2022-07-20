@@ -26,45 +26,51 @@
     <script src="https://unpkg.com/@rive-app/canvas@1.0.47"></script>
     <script src="script.js" defer></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body class="bg-main font-['Poppins'] font-medium overflow-x-hidden">
+<body class="bg-main font-['Poppins'] font-medium overflow-x-hidden py-100">
+
+
+
     <img class="absolute left left-0 top-20" src="assets/slashleft.svg">
     <img class="absolute right right-0 top-0" src="assets/slashright.svg">
-    <img class="md:hidden block absolute top-100 right-90 max-w-[95%]" src="assets/mobilehero.svg">
+
     <!-- NAV BAR -->
     <section class=" relative w-full min-h-screen flex flex-col justify-start ">
 
-        <input type="checkbox" id="check">
-        <header class="navbar relative w-full px-4 py-10 top-0 flex justify-between align-center">
+        <!-- <input type="checkbox" id="check"> -->
+        <header class="navbar relative w-full  top-0 flex justify-between align-center">
 
 
-            <div class="flex flex-row justify-start rounded-full px-4 ml-3 py-2 bg-[#63C0BD]/[.15]">
-                <img src="assets/status_symbol.svg" alt="status symbol">
-                <h2 class="status logo text-white text-sm hidden lg:block">Available for Work</h2>
+            <div class="px-6 py-6 ">
+                <!-- bg-[#63C0BD]/[.15] -->
+                <!-- <img src="assets/status_symbol.svg" alt="status symbol">
+                <h2 class="status logo text-white text-sm hidden lg:block">Available for Work</h2> -->
+                <img width="40px" src="assets/logocyan.svg" alt="logo">
             </div>
 
 
-            <div class="navigation text-[#CCCDD0] tracking-wider">
-                <a id="link" href="#home">Home</a>
+            <div class="navigation mt-9 text-[#CCCDD0] tracking-wider">
+                <!-- <a id="link" href="#home">Home</a>
                 <a id="link" href="#about">About</a>
-                <a id="link" href="#work">Work</a>
+                <a id="link" href="#work">Work</a> -->
                 <a href="mailto:nathan@cyanstudio.dev?&subject=I would like a new website&body=# What is the website for (Personal, Company, Organization, etc.)?"
-                    class="btn gradientBorder px-7 py-2 mr-3 transform transition duration-500 hover:text-white"
+                    class="btn gradientBorder px-7 py-2 mr-6 transform transition duration-500 hover:text-white"
                     onmouseover="changetobg(event)" onmouseleave="changefrombg(event)" href=" #">Get a Site</a>
             </div>
-            <label class="mr-5 " for="check">
+            <!-- <label class="mr-5 " for="check">
                 <svg class="menu-btn w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                   
                     <path fill="#fff"
                         d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
                 </svg>
                 <svg class="close-btn w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                   
                     <path fill="#fff"
                         d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
                 </svg>
-            </label>
+            </label> -->
 
         </header>
         <!-- <div class="content absolute top-1/3 left-5 md:left-12 w-screen h-screen/2 md:w-1/2 md:px-1">
@@ -80,8 +86,13 @@
                 </svg></a>
             </div>
         </div> -->
-
-        <div id="home" class="relative container px-4 pt-15 mt-10 md:pt-20 mx-auto">
+        <!-- <svg width="714" height="714" viewBox="0 0 714 714" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path"
+                d="M393.423 122.271L420.964 95.1469C475.045 41.8824 563.091 40.5641 617.484 93.5216C638.094 113.633 651.791 139.598 656.65 167.769C661.508 195.94 657.284 224.902 644.571 250.588C638.473 262.857 636.419 276.696 638.692 290.172C640.969 303.647 647.46 316.086 657.262 325.751C675.287 307.958 689.572 286.842 699.307 263.609C709.042 240.376 714.035 215.482 714 190.348C713.961 165.215 708.9 140.335 699.098 117.129C689.296 93.9234 674.947 72.8471 656.873 55.1044C580.814 -19.3827 457.357 -17.9005 381.511 56.7959L119.007 315.327L97.4267 294.072C42.4279 239.905 42.0773 151.362 98.0464 98.1568C118.764 78.5234 145.158 65.7067 173.586 61.4761C202.014 57.2455 231.075 61.8095 256.757 74.538C268.479 80.4542 281.8 82.5705 294.816 80.585C307.833 78.5994 319.879 72.6134 329.235 63.4819L329.904 62.8262C330.113 62.6225 330.278 62.3801 330.391 62.113C330.503 61.8461 330.561 61.5598 330.561 61.2707C330.561 60.9815 330.503 60.6952 330.391 60.4284C330.278 60.1616 330.113 59.9192 329.904 59.7151C293.774 25.025 245.358 5.53965 194.901 5.38211C144.443 5.2246 95.9022 24.4073 59.5497 58.8711C-18.7574 133.323 -18.4776 257.13 58.4874 332.933L320.913 591.393L293.037 618.849C238.955 672.113 150.906 673.432 96.5166 620.474C75.9063 600.364 62.2099 574.398 57.351 546.227C52.4924 518.057 56.715 489.095 69.4262 463.408C75.5245 451.138 77.5799 437.299 75.3053 423.826C73.0305 410.349 66.539 397.909 56.738 388.244C38.7142 406.039 24.4267 427.153 14.6914 450.385C4.95612 473.62 -0.035979 498.512 0.000195195 523.648C0.0363695 548.78 5.10011 573.662 14.9023 596.866C24.7044 620.073 39.0528 641.149 57.1275 658.891C133.182 733.382 256.644 731.903 332.49 657.203L595.333 398.327L616.995 419.662C671.077 472.926 672.415 559.641 618.645 613.209C598.227 633.511 571.862 646.998 543.26 651.787C514.657 656.572 485.251 652.411 459.17 639.89C446.708 633.881 432.65 631.854 418.963 634.101C405.276 636.343 392.641 642.743 382.828 652.404C400.895 670.157 422.334 684.23 445.922 693.817C469.514 703.405 494.787 708.323 520.309 708.288C545.827 708.249 571.09 703.262 594.65 693.608C618.213 683.954 639.613 669.822 657.627 652.02C733.261 577.115 731.756 455.519 655.913 380.822L393.423 122.271ZM360.101 552.781L158.205 353.936L354.222 160.883L556.118 359.729L360.101 552.781Z"
+                fill="#00BCE3" fill-opacity="0.24" />
+        </svg> -->
+        
+        <div id="home" class="relative container px-4 pt-15 mt-20 md:pt-20 mx-auto">
 
             <div class="flex flex-wrap items-center -mx-4 mb-20 2xl:mb-14">
                 <div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
@@ -93,7 +104,8 @@
                         Cyan Design
 
                     </h2>
-                    <p class="description mb-12 lg:mb-16 2xl:mb-24 text-xl text-gray-300 md:text-left text-center">We
+                    <p class="description mb-12 lg:mb-16 2xl:mb-24 text-xl text-gray-300  md:text-left text-center">
+                        We
                         build fast and modern websites with your brand image and purpose in mind. </p>
                     <a class="downarrow inline-block mt-20 px-5 py-5 text-lg border-2 gradientBorder rounded-xl text-white grow"
                         href="#about">
@@ -111,10 +123,10 @@
     <div id="about" class="container w-full  md:w-3/4 lg:w-[60%] mx-auto px-4 mb-20">
 
         <div class="flex flex-wrap items-center">
-            <h1 class="mx-auto font-[600] text-4xl mb-20 text-white">What We offer</h1>
+            <h1 class="mx-auto font-[600] text-4xl mb-40 text-white">What We offer</h1>
             <div class="w-full  flex flex-wrap -mx-4">
                 <div class="mb-8 lg:mb-0 w-full md:w-1/2 px-4">
-                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528] aos-init aos-animate"
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#00D3FF]/[.3] aos-init aos-animate"
                         data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
 
                         <img class="mb-10 mx-auto" width="500px" height="50px" src="assets/dark.svg">
@@ -125,7 +137,7 @@
                     </div>
 
 
-                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528]" data-aos="fade-up"
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px]  bg-[#63C0BD]/[.3]" data-aos="fade-up"
                         data-aos-delay="200" data-aos-duration="1000">
 
                         <img class="mb-10 mx-auto" width="500px" height="300px" src="assets/tree.svg">
@@ -140,19 +152,20 @@
                 <div class="w-full md:w-1/2 lg:mt-20 px-4">
 
 
-                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528]" data-aos="fade-up"
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#63C0BD]/[.3]" data-aos="fade-up"
                         data-aos-delay="400" data-aos-duration="1000">
 
                         <img class="mb-10 mx-auto" width="500px" height="50px" src="assets/growth.svg">
 
                         <h4 class="mb-2 text-2xl font-[600] font-heading text-white">Intuitive UX </h4>
-                        <p class="text-[#E6E6E6] text-md leading-loose">Foster trust and reliability through an enhanced
+                        <p class="text-[#E6E6E6] text-md leading-loose">Foster trust and reliability through an
+                            enhanced
                             user experience. </p>
                     </div>
 
 
 
-                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#0D1528] " data-aos="fade-up"
+                    <div class="mb-8 py-20 px-20 shadow-md rounded-[30px] bg-[#00D3FF]/[.3] " data-aos="fade-up"
                         data-aos-delay="400" data-aos-duration="1000">
 
                         <img class="mb-10 mx-auto" width="500px" height="50px" src="assets/boxes.svg">
@@ -169,7 +182,7 @@
             </div>
         </div>
     </div>
-    <div class="work w-full mb-25 ml-5 flex mb-5 justify-start">
+    <!-- <div class="work w-full mb-25 ml-5 flex mb-5 justify-start">
         <div class="flex justify-center flex-col">
             <img src="./assets/Work.svg">
             <img class="line mx-auto mt-5" width="2" class="mx-auto mt-4" src="./assets/line.svg">
@@ -217,13 +230,13 @@
                 <p class="text-['Roboto'] mb-5 text-5xl font-bold text-white">Louisville <span
                         class="text-[#ef0f0f]">Rocketry</span>
                 </p>
-                <!--                 <a href="https://www.louisvillerocketry.com/" class="text-lg text-white underline decoration-[#ef0f0f]">Visit</a> -->
+                                <a href="https://www.louisvillerocketry.com/" class="text-lg text-white underline decoration-[#ef0f0f]">Visit</a>
             </div>
 
             <img class="rounded-xl mx-auto lg:mx-0  w-[90%] md:w-[55%]" src="./assets/rocket.jpeg">
         </div>
 
-    </div>
+    </div> -->
 
 
     <div class="container stats w-screen mx-auto px-4 mt-20">
@@ -255,7 +268,7 @@
     <section class=" pt-20 flex flex-col justify-between align-center text-center">
         <a href="mailto:nathan@cyanstudio.dev?&subject=I would like a new website&body=# What is the website for (Personal, Company, Organization, etc.)?"
             onmouseover="changetobg2(event)" onmouseleave="changefrombg2(event)"
-            class="mb-5 shadow-[0_5px_60px_-15px_#2456EA] mx-auto px-5 py-5 w-[25%] text-white text-2xl text-center callAction hover:gradientBg ">
+            class="mb-5 shadow-[0_5px_60px_-15px_#00BCE3] mx-auto px-5 py-5 w-[25%] text-white text-2xl text-center callAction hover:gradientBg ">
             Get a site
         </a>
         <!-- <a href="mailto:l@gmail.com?&subject=I would like to upgrade my site&body=# What is the website for (Personal, Company, Organization, etc.)? "
@@ -274,7 +287,7 @@
             Email me</a>
     </div>
 
-    <canvas class="rocket hidden xl:block absolute md:left-[55%] md:top-[20%] top-40 left-0 z-[-1]" id="canvas"
+    <canvas class="rocket hidden xl:block absolute md:left-[55%] md:top-[20%] top-40 left-0 z-[1]" id="canvas"
         width="650" height="650"></canvas>
 
     <script>
@@ -315,6 +328,7 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
     </script>
+
 </body>
 
 </html>
